@@ -16,5 +16,54 @@ namespace Bai8_PhepTinhCoban_RadioBatton
         {
             InitializeComponent();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbTru_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTinh_Click(object sender, EventArgs e)
+        {
+            double so1 = double.Parse(txtSo1.Text);
+            double so2 = double.Parse(txtSo2.Text);
+            if (rdbCong.Checked)
+            {
+                txtKQ.Text = (so1 + so2).ToString();
+            }
+            if (rdbTru.Checked)
+            {
+                txtKQ.Text = (so1 - so2).ToString();
+            }
+            if (rdbNhan.Checked)
+            {
+                txtKQ.Text = (so1 * so2).ToString();
+            }
+            if (rdbChia.Checked)
+            {
+                if (so2 == 0)
+                {
+                    txtKQ.Text = "không chia được cho 0";
+                }
+                else
+                {
+                    txtKQ.Text = (so1 / so2).ToString();
+                }
+            }
+        }
+
+        private void rdbCong_CheckedChanged(object sender, EventArgs e)
+        {
+            //ghi 
+        }
     }
 }
